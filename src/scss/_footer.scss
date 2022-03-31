@@ -90,6 +90,11 @@
 	@extend %footer_text;
 
 	display: block;
+
+	@extend %transition_color;
+	&:hover {
+		color: $white;
+	}
 }
 
 .footer__form {
@@ -114,12 +119,10 @@
 .footer__button_in {
 	display: block;
 
-	color: rgba($grey_2, 0.6);
+	height: 2.8rem;
+	max-width: 3.2rem;
 
-	svg {
-		max-height: 2.8rem;
-		max-width: 3.2rem;
-	}
+	color: rgba($grey_2, 0.6);
 
 	@extend %transition_color;
 }
@@ -150,14 +153,12 @@
 .social_footer__icon {
 	display: block;
 
+	max-width: 1.8rem;
+	height: 1.6rem;
+
 	margin-right: 1.6rem;
 
 	color: $grey_2;
-
-	svg {
-		max-width: 1.8rem;
-		max-height: 1.6rem;
-	}
 
 	@extend %transition_color;
 }

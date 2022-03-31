@@ -30,6 +30,19 @@ body {
 	@supports (display: grid) {
 		display: block;
 	}
+
+	opacity: 0;
+	transition: opacity 1s ease 0s;
+	will-change: opacity;
+
+	.loaded & {
+		opacity: 1;
+	}
+
+	.overflowLock & {
+		overflow: hidden;
+		touch-action: none;
+	}
 }
 
 .wrapper {
@@ -54,11 +67,6 @@ body {
 a {
 	text-decoration: none;
 	color: $color_link_base;
-
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-	}
 }
 
 .elements_list {

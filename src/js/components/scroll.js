@@ -3,20 +3,30 @@ import anime from 'animejs/lib/anime';
 // ========================================================================================================================================================
 
 // Title animation
-let textWrapper = document.querySelector('.letterAnimation');
-if (textWrapper) {
-	textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+let letterAnimation = document.querySelector('.letterAnimation');
+if (letterAnimation) {
+	letterAnimation.innerHTML = letterAnimation.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 	anime.timeline({ loop: false })
 		.add({
 			targets: '.letterAnimation .letter',
 			translateY: [40, 0],
-			translateZ: 0,
 			opacity: [0, 1],
-			easing: 'easeOutExpo',
 			duration: 1200,
 			delay: (el, i) => 500 + 30 * i,
 		});
+}
+
+// Text animation
+let textAnimation = document.querySelector('.textAnimation');
+if (textAnimation) {
+	anime({
+		targets: textAnimation,
+		translateX: [-40, 0],
+		opacity: [0, 1],
+		delay: 1800,
+		duration: 2000,
+	});
 }
 
 function offset(el) {
@@ -27,7 +37,7 @@ function offset(el) {
 }
 
 // Header scroll && Scroll items
-let scrItems = document.querySelectorAll('[data-scr]');
+let animateItems = document.querySelectorAll('.animateItems');
 
 function scrollOnscroll() {
 	let srcValue = window.scrollY;
@@ -39,9 +49,9 @@ function scrollOnscroll() {
 			header.classList.remove('scroll');
 		}
 	}
-	if (scrItems.length > 0) {
-		for (let index = 0; index < scrItems.length; index += 1) {
-			let scrItem = scrItems[index];
+	if (animateItems.length) {
+		animateItems.forEach(el => {
+			let scrItem = el;
 			let scrItemOffset = offset(scrItem).top;
 			let scrItemHeight = scrItem.offsetHeight;
 
@@ -51,9 +61,9 @@ function scrollOnscroll() {
 			}
 
 			if ((srcValue > scrItemOffset - scrItemPoint) && srcValue < (scrItemOffset + scrItemHeight)) {
-				scrItem.classList.add('_active');
+				scrItem.classList.add('animateItemsActive');
 			}
-		}
+		});
 	}
 }
 

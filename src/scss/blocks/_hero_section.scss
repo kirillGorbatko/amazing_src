@@ -106,7 +106,7 @@
 	width: 100%;
 	height: 100%;
 
-	img{
+	img {
 		@extend %cover_img;
 	}
 }
@@ -119,7 +119,7 @@
 	}
 }
 
-.hero_section_decor{
+.hero_section_decor {
 	opacity: 0.2;
 
 	@include bp($point_3) {
