@@ -14,7 +14,7 @@ const readyFunc = () => {
 };
 
 const loadFunc = () => {
-	document.documentElement.classList.add('loaded');
+	document.documentElement.classList.add('pageLoaded');
 };
 
 documentReady(() => {
