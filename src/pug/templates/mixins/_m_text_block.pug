@@ -1,0 +1,22 @@
+mixin text_block(data)
+	- mod = data.mod? data.mod : 'default';
+	- heightMod = data.heightMod? `text_block--${data.heightMod}` : '';
+	- buttonSize = data.buttonSize? data.buttonSize : 'default';
+	.text_block(class=`text_block--${mod} ${heightMod}`)
+		if (data.title || data.subtitle)
+			.text_block__head
+				if (data.title)
+					h3.text_block__title= data.title
+				if (data.subtitle)
+					.text_block__subtitle= data.subtitle
+		if (data.text)
+			.text_block__text= data.text
+		if (data.subtext)
+			.text_block__subtext
+				each par in data.subtext
+					p.text_block__par= par
+		if (data.button)
+			.text_block__footer
+				a.text_block__button(class=`text_block__button--${buttonSize}`, href="#")= data.button
+					if (data.icon)
+						span.text_block__button_icon

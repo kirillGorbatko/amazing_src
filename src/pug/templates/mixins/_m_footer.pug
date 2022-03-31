@@ -1,0 +1,45 @@
+- footerSocial = ['facebook', 'twitter', 'instagram', 'spotify'];
+mixin footer
+	footer.footer
+		.footer_in 
+			.footer__body 
+				.footer__column 
+					h4.footer__title.footer__title--motto AMAZING DUDE. AMAZING LIFE.
+					.footer__text Mauris ornare lobortis arcu, at sodales dolor finibus nec. In convallis risus ligula, bibendum sagittis ante cursus vitae. Donec ornare, dui nec sagittis imperdiet, nunc eros dignissim augue, ut aliquam nibh felis sit amet leo. Vivamus eu tincidunt tellus. Vestibulum quis condimentum lectus, nec aliquet lectus. Duis sollicitudin facilisis dui ac aliquet. Phasellus tempor sollicitudin augue, id hendrerit enim gravida non. Integer consequat vel arcu quis dictum. Vestibulum viverra commodo nunc eu pellentesque. Phasellus in scelerisque elit, eu ultricies mauris.
+					.footer__copy Ⓒ 2015. all rights reserved.
+				.footer__column
+					.footer__block
+						h4.footer__title CONTACT ME
+						.footer__wrap
+							a.footer__link(href="#") 1242 Crestview Terrace Artesia Wells, TX 78001
+						.footer__wrap
+							a.footer__link(href="tel:8306767974") Phone: 830-676-7974
+							a.footer__link(href="mailto:halo@sitename.com") Email: halo@sitename.com
+					.footer__block
+						h4.footer__title FOLLOW ME ON
+						ul.footer__social.social_footer
+							each social in footerSocial
+								li.social_footer__item 
+									a.social_footer__link(href="#")
+										span.social_footer__icon 
+											+icon(social,'icon--size_mod')
+										span.social_footer__text= social
+				.footer__column 
+					.footer__block
+						h4.footer__title SUBSCRIBE
+						.footer__text Duis sollicitudin facilisis dui ac aliquet. Phasellus tempor sollicitudin augue, id hendrerit enim gravida non. Integer consequat vel arcu quis dictum. Vestibulum viverra commodo nunc eu pellentesque.
+						form.footer__form(action="#", method='POST')
+							+form_input({
+									type: 'text',
+									placeholder: 'ENTER YOUR EMAIL ADDRESS',
+									id: 'input_1',
+								})
+							button.footer__button(type="submit") 
+								span.footer__button_in
+									+icon('arrow', 'icon--size_mod')
+					.footer__block
+						h4.footer__title Sponsor
+						ul.footer__sponsors.sponsors_footer
+							+loop_while(3)
+								li.sponsors_footer__item 
+									a.sponsors_footer__link(href="#") logo

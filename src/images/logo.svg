@@ -1,0 +1,15 @@
+<svg id="LOGO" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 60px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: "Fira Sans";
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <rect id="CONTAINER" width="80" height="80"/>
+  <text id="_." data-name="/." class="cls-1" x="38.918" y="60.516">/.</text>
+</svg>

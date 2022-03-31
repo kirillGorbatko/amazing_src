@@ -1,0 +1,54 @@
+.social_section {
+}
+
+.social_section__body {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+}
+
+.social_section__column {
+	@include bp($point_1, min) {
+		padding-top: 13.9rem;
+		padding-bottom: 13.5rem;
+	}
+
+	@include bp($point_1 - 1) {
+		padding: 4rem 1.6rem;
+	}
+}
+
+.social_section__column--spotify {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		height: 100%;
+
+		background-color: $green;
+
+		@include bp($point_5, min) {
+			width: 50%;
+		}
+
+		@include bp($point_5 - 1) {
+			width: 100%;
+		}
+	}
+
+	@include bp($point_1, min) {
+		padding-right: 9.4rem;
+	}
+
+	@include bp($point_5 - 1) {
+		position: relative;
+	}
+}
+
+.social_section__column--itunes {
+	@include bp($point_1, min) {
+		padding-left: 5.9rem;
+	}
+}

@@ -1,0 +1,24 @@
+section.section.play_section
+	.play_section__body(data-scr)
+		.play_section__block
+			+text_block({
+				mod: 'green',
+				title: 'Self-Effacing Rage',
+				subtitle: 'FT. Fascinating Collision ',
+				subtext: [
+						'Director: James G. Rohrer ',
+						'Production Company: Sycamore ',
+						'Producer: Laura S. Carlton ',
+						'Executive Producer: Jack M. Heckart',
+					],
+				button: 'click to play',
+				icon: true,
+				buttonSize: 'small',
+			})
+		.play_section__image
+			+picture({
+				class: 'play_section__img',
+				customClass: 'play_section_img__in',
+				type: 'jpg',
+				img: `07`,
+			})

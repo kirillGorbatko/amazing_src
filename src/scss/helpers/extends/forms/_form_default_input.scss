@@ -1,0 +1,38 @@
+%form_el_label {
+	display: block;
+	margin-bottom: 0.4rem;
+
+	font-size: 1.6rem;
+	color: $black;
+}
+
+%form_el_default {
+	display: block;
+	width: 100%;
+	height: $input_height;
+	padding: $input_offset;
+	font-size: $input_font_size;
+	font-family: $font_1;
+	font-weight: 300;
+	color: $input_text_color;
+	background-color: rgba($grey_3, 0.4);
+	border: none;
+
+	&::-webkit-input-placeholder {
+		color: $input_placeholder_color;
+	}
+
+	&::-moz-placeholder {
+		color: $input_placeholder_color;
+	}
+
+	&:-ms-input-placeholder {
+		color: $input_placeholder_color;
+	}
+
+	transition: box-shadow 0.3s ease;
+	&:hover,
+	&:focus {
+		box-shadow: rgba($white, 0.66) inset 0 0.2rem 0.4rem;
+	}
+}

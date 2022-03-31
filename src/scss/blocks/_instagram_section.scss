@@ -1,0 +1,41 @@
+.instagram_section {
+	background-color: $blue_2;
+}
+
+.instagram_section__body {
+	display: grid;
+
+	@include bp($point_2, min) {
+		grid-template-columns: 2fr 1fr 1fr;
+	}
+
+	@include bp($point_3) {
+		grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+	}
+}
+
+.instagram_section__image {
+	order: 2;
+}
+
+.info_section_img {
+}
+
+.info_section_img__in {
+	@extend %img_max_height;
+	@extend %cover_img;
+}
+
+.instagram_section__block {
+	display: grid;
+	align-items: center;
+
+	@include bp($point_1, min) {
+		justify-content: end;
+
+		padding: 12.4rem 8.4rem 8rem 0;
+	}
+	@include bp($point_1 - 1) {
+		padding: 4rem 1.6rem;
+	}
+}

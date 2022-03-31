@@ -1,0 +1,25 @@
+.gallery_section {
+}
+
+.gallery_section__list {
+	display: grid;
+
+	@include bp($point_2, min) {
+		grid-template-columns: repeat(auto-fit, minmax(25.6rem, 1fr));
+	}
+
+	@media (max-width: $point_3) and (min-width: $point_6) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.gallery_section__item {
+}
+
+.gallery_section_img {
+}
+
+.gallery_section_img__in {
+	@extend %img_max_height;
+	@extend %cover_img;
+}

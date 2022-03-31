@@ -1,0 +1,33 @@
+.info_section {
+}
+
+.info_section__body {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+}
+
+.info_section__image {
+	@include bp($point_5 - 1) {
+		order: 2;
+	}
+}
+
+.info_section_img {
+}
+
+.info_section_img__in {
+	@extend %img_max_height;
+	@extend %cover_img;
+}
+
+.info_section__block {
+	background-color: $white_3;
+
+	@include bp($point_2, min) {
+		padding: 11.2rem 5.6rem 5.6rem;
+	}
+
+	@include bp($point_3) {
+		padding: 4.8rem 1.6rem;
+	}
+}

@@ -1,0 +1,24 @@
+section.section.hero_section
+	.section_in.hero_section_in
+		.hero_section__content
+			h1.hero_section__title.letterAnimation Amazing Dude. Amazing Life.
+			.hero_section__text(data-scr)
+				| Welcome to the personal site of 
+				span.hero_section__text_bold John Doe
+				| .
+				| A professional skier and a musician.
+	.hero_section__bg 
+		+picture({
+				class: 'hero_section_img',
+				customClass: 'hero_section_img__in',
+				type: 'jpg',
+				img: `hero`,
+			})
+		+picture({
+				class: 'hero_section_decor',
+				customClass: 'hero_section_decor__in',
+				png: true,
+				img: `01`,
+			})
+		.hero_section__snow 
+			img(src="images/01.gif", alt="snow")

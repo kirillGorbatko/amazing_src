@@ -1,0 +1,22 @@
+%h1 {
+	font-size: 4rem;
+	text-transform: uppercase;
+}
+
+%footer_text {
+	font-size: 1.4rem;
+	font-weight: 300;
+	line-height: 1.5;
+	color: $grey_2;
+}
+// offsets
+
+%title_offset {
+	margin-bottom: 2rem;
+}
+
+// max-height
+
+%img_max_height {
+	max-height: 52rem;
+}

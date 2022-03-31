@@ -1,0 +1,10 @@
+section.section.gallery_section
+	ul.gallery_section__list.galleryAnim(data-scr)
+		+loop_while(4)
+			li.gallery_section__item
+				+picture({
+					class: 'gallery_section_img',
+					customClass: 'gallery_section_img__in',
+					type: 'jpg',
+					img: `0${i+1}`,
+				})
