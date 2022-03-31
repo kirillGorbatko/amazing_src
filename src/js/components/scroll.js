@@ -37,7 +37,7 @@ function offset(el) {
 }
 
 // Header scroll && Scroll items
-let animateItems = document.querySelectorAll('.animateItems');
+let $animateItems = document.querySelectorAll('.animateItems');
 
 function scrollOnscroll() {
 	let srcValue = window.scrollY;
@@ -49,8 +49,8 @@ function scrollOnscroll() {
 			header.classList.remove('scroll');
 		}
 	}
-	if (animateItems.length) {
-		animateItems.forEach(el => {
+	if ($animateItems.length) {
+		$animateItems.forEach(el => {
 			let scrItem = el;
 			let scrItemOffset = offset(scrItem).top;
 			let scrItemHeight = scrItem.offsetHeight;

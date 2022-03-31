@@ -3,8 +3,8 @@ let bodyLockStatus = true;
 export const bodyLock = (delay = 500) => {
 	let body = document.querySelector('body');
 	if (bodyLockStatus) {
-		let lockPadding = document.querySelectorAll('.lockPadding');
-		lockPadding.forEach(el => {
+		let $lockPadding = document.querySelectorAll('.lockPadding');
+		$lockPadding.forEach(el => {
 			const element = el;
 			element.style.paddingRight = `${window.innerWidth - document.querySelector('.wrapper').offsetWidth}px`;
 		});
@@ -22,9 +22,9 @@ export const bodyLock = (delay = 500) => {
 export const bodyUnlock = (delay = 500) => {
 	let body = document.querySelector('body');
 	if (bodyLockStatus) {
-		let lockPadding = document.querySelectorAll('.lockPadding');
+		let $lockPadding = document.querySelectorAll('.lockPadding');
 		setTimeout(() => {
-			lockPadding.forEach(el => {
+			$lockPadding.forEach(el => {
 				const element = el;
 				element.style.paddingRight = '0px';
 			});
