@@ -16,7 +16,7 @@
 	}
 }
 
-.hero_section__bg.animateItemsActive {
+.hero_section__bg.activeState {
 	&::before {
 		transform: translate(0, 0);
 	}
@@ -46,7 +46,7 @@
 		}
 	}
 
-	.info_section__body.animateItemsActive {
+	.info_section__body.activeState {
 		.text_block {
 			opacity: 1;
 			transform: translate(0, 0);
@@ -60,28 +60,28 @@
 	// // gallery_section ========================================================================================================================================================
 
 	.gallery_section__list {
-		.gallery_section__item {
-			transform: translate(-10%, 0);
+		overflow: hidden;
 
-			transition: transform ease 1s;
+		.gallery_section__item {
+			transition: transform ease 1.2s;
 			will-change: transform;
 
 			&:nth-child(1) {
-				transition-delay: 0s;
+				transform: translate(-100%, 0);
 			}
 			&:nth-child(2) {
-				transition-delay: 0.1s;
+				transform: translate(0, -100%);
 			}
 			&:nth-child(3) {
-				transition-delay: 0.2s;
+				transform: translate(0, 100%);
 			}
 			&:nth-child(4) {
-				transition-delay: 0.3s;
+				transform: translate(100%, 0);
 			}
 		}
 	}
 
-	.gallery_section__list.animateItemsActive {
+	.gallery_section__list.activeState {
 		.gallery_section__item {
 			transform: translate(0, 0);
 		}
@@ -110,7 +110,7 @@
 		}
 	}
 
-	.instagram_section__body.animateItemsActive {
+	.instagram_section__body.activeState {
 		.text_block {
 			opacity: 1;
 			transform: translate(0, 0);
@@ -144,7 +144,7 @@
 		}
 	}
 
-	.play_section__body.animateItemsActive {
+	.play_section__body.activeState {
 		.play_section__image,
 		.text_block {
 			opacity: 1;
@@ -182,7 +182,7 @@
 		}
 	}
 
-	.social_section__body.animateItemsActive {
+	.social_section__body.activeState {
 		.text_block {
 			opacity: 1;
 			transform: translate(0, 0);

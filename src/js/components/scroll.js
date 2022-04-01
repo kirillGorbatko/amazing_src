@@ -1,4 +1,5 @@
 import anime from 'animejs/lib/anime';
+import { onWindowScroll, documentReady } from 'utils';
 
 // ========================================================================================================================================================
 
@@ -37,16 +38,16 @@ function offset(el) {
 }
 
 // Header scroll && Scroll items
-let $animateItems = document.querySelectorAll('.animateItems');
+let $animateItems = document.querySelectorAll('.animateItem');
 
 function scrollOnscroll() {
 	let srcValue = window.scrollY;
 	let header = document.querySelector('header.header');
 	if (header !== null) {
 		if (srcValue > 10) {
-			header.classList.add('scroll');
+			header.classList.add('headerScroll');
 		} else {
-			header.classList.remove('scroll');
+			header.classList.remove('headerScroll');
 		}
 	}
 	if ($animateItems.length) {
@@ -61,15 +62,15 @@ function scrollOnscroll() {
 			}
 
 			if ((srcValue > scrItemOffset - scrItemPoint) && srcValue < (scrItemOffset + scrItemHeight)) {
-				scrItem.classList.add('animateItemsActive');
+				scrItem.classList.add('activeState');
 			}
 		});
 	}
 }
 
 setTimeout(() => {
-	document.addEventListener('DOMContentLoaded', scrollOnscroll);
+	documentReady(scrollOnscroll);
 	scrollOnscroll();
 }, 100);
 
-window.addEventListener('scroll', scrollOnscroll);
+onWindowScroll(scrollOnscroll);
